@@ -24,5 +24,7 @@ jobs:
     - name: Publish
       uses: pypa/gh-action-pypi-publish@master
       with:
-        password: ${{ secrets.pypi_password }}
+        user: __token__
+        password: ${{ secrets.TEST_PYPI_TOKEN }}
+        repository_url: https://test.pypi.org/legacy/
         skip_existing: true
